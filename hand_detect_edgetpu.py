@@ -20,8 +20,7 @@ output_details = interpreter.get_output_details()
 
 # Gesture mapping
 gesture_names = ["Up", "Down", "Left", "Right", "Left Up", "Left Down", "Right Down", "Right Up", "Fire"]
-width = 640
-height = 360
+
 # Function to normalize landmarks
 def normalize_landmarks(landmarks):
     base_x, base_y = landmarks[0].x, landmarks[0].y
@@ -44,7 +43,7 @@ def calc_bounding_rect(image, landmarks):
     x, y, w, h = cv2.boundingRect(landmark_array)
     return [x, y, x + w, y + h]
 # Start capturing video from the camera
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 prev_time = time.time()
 prev_fps=0
@@ -98,7 +97,7 @@ while cap.isOpened():
             
 
             # Display the predicted gesture on the frame
-            cv2.putText(frame, f'Gesture: {gesture_name}', (180, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2,
+            cv2.putText(frame, f'Gesture: {gesture_name}', (180, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2,
                         cv2.LINE_AA)
     fps, prev_time = calculate_fps(prev_time, prev_fps)  # Calculate and display FPS
     prev_fps = fps

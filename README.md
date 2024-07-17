@@ -1,12 +1,12 @@
 # How-to-Train-Custom-Hand-Gestures-Using-Mediapipe
 This site provides a straightforward way to train computers using Mediapipe hand to detect your own hand gestures and use them to control a robotic device. It is divided to the following steps:
 
-**Data Collection**
+**Step 1: Data Collection**
 *	Using MediaPipe to detect and extract landmark points from hand gestures in video frames.
 *	Normalizing the landmark points to make the model training more effective.
 *	Storing the extracted landmarks along with their corresponding gesture labels in a CSV file for training.
 
-_hand_create_csv.py_: This script uses MediaPipe Hand to detect hand landmarks in video frames. Up to a total of 26 gestures can be extracted. You move your hand in front of the camera in different positions and angles as shown above. By pressing keyboard keys a to z, defined as class numbers 0-25, the x and y coordinates of the landmarks of your hand at that frame are extracted and normalized to point 0 (the wrist point). The class number and the flattened coordinates are stored as a row in a CSV file. The count of the dataset in each class is displayed when you show your hand and press a letter. The data are sorted during execution and stored in CSV file format. I have collected 60 sets of data for each gesture in different positions and angles, totaling 540 datasets. The resulting file is called “hand_gesture_data.csv” and is structured as shown above.
+***hand_create_csv.py:*** This script uses MediaPipe Hand to detect hand landmarks in video frames. Up to a total of 26 gestures can be extracted. You move your hand in front of the camera in different positions and angles as shown above. By pressing keyboard keys a to z, defined as class numbers 0-25, the x and y coordinates of the landmarks of your hand at that frame are extracted and normalized to point 0 (the wrist point). The class number and the flattened coordinates are stored as a row in a CSV file. The count of the dataset in each class is displayed when you show your hand and press a letter. The data are sorted during execution and stored in CSV file format. I have collected 60 sets of data for each gesture in different positions and angles, totaling 540 datasets. The resulting file is called “hand_gesture_data.csv” and is structured as shown above.
 
 **Model Training**
 

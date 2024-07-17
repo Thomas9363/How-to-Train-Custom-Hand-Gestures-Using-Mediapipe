@@ -31,7 +31,7 @@ If you train your own gestures with different name, you need to change them acco
 
 **Step 4: Model Deployment and Inference for Coral EdgeTPU**
 
-To run the Edge TPU model on a Raspberry Pi, I have [followed the instructions] (https://coral.ai/docs/accelerator/get-started/#requirements) to set up the Edge TPU runtime, the necessary software, and modify my script to use the Edge TPU. The script is ***hand_detect_edgetpu.py***. You also need to convert hand_gesture_model_quantized.tflite to ***hand_gesture_model_quantized_edgetpu.tflite*** using a web-based Google Colab compiler.
+To run the Edge TPU model on a Raspberry Pi, I have follow [https://coral.ai/docs/accelerator/get-started/#requirements](https://coral.ai/docs/accelerator/get-started/#requirements) to set up the Edge TPU runtime, the necessary software, and modify my script to use the Edge TPU. The script is ***hand_detect_edgetpu.py***. You also need to convert hand_gesture_model_quantized.tflite to ***hand_gesture_model_quantized_edgetpu.tflite*** using a web-based Google Colab compiler.
 
 **Step 5: Control a Robotic Device**
 

@@ -30,9 +30,11 @@ gesture_names = ["Up", "Down", "Left", "Right", "Left Up", "Left Down", "Right D
 If you train your own gestures with different name, you need to change them accordingly. Another thing to note is that you need to change cap = cv2.VideoCapture() to the number of camera you are using.
 
 **Step 4: Model Deployment and Inference for Coral EdgeTPU**
+
 To run the Edge TPU model on a Raspberry Pi, I have followed the instructions to set up the Edge TPU runtime, the necessary software, and modify my script to use the Edge TPU. The script is ***hand_detect_edgetpu.py***. You also need to convert hand_gesture_model_quantized.tflite to ***hand_gesture_model_quantized_edgetpu.tflite*** using a web-based Google Colab compiler.
 
 **Step 5: Control a Robotic Device**
+
 The robotic device contains a pan-tilt servo setup with two lasers mounted on top. ***hand_detect_robot.py*** is the script used to control the device. THe detailed descriptions are located at my instructables site.
 
 

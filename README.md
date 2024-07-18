@@ -36,6 +36,6 @@ To run the Edge TPU model on a Raspberry Pi, I have follow [the instructions](ht
 
 **Step 5: Control a Robotic Device**
 
-The robotic device contains a pan-tilt servo setup with two lasers mounted on top. ***hand_detect_robot.py*** is the script used to control the device. You can see the results in my [YouTube channel](https://www.youtube.com/watch?v=cxTbU-zHZtY). THe detailed descriptions are located at my [instructables site](https://www.instructables.com/How-to-Train-Custom-Hand-Gestures-Using-Mediapipe/).
+The robotic device contains a pan-tilt servo setup with two lasers mounted on top. ***hand_detect_robot.py*** is the script used to control the device. You can see the results in my [YouTube channel](https://www.youtube.com/watch?v=cxTbU-zHZtY). A more detailed description is located at my [instructables site](https://www.instructables.com/How-to-Train-Custom-Hand-Gestures-Using-Mediapipe/).
 
 

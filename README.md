@@ -6,7 +6,7 @@ This site provides a straightforward way to train computers using Mediapipe hand
 *	Using MediaPipe to detect and extract landmark points from hand gestures in video frames.
 *	Normalizing the landmark points to make the model training more effective.
 *	Storing the extracted landmarks along with their corresponding gesture labels in a CSV file for training.
-
+<img src="/data.png" alt="prototype" height="200">
 ***hand_create_csv.py:*** This script uses MediaPipe Hand to detect hand landmarks in video frames. Up to a total of 26 gestures can be extracted. You move your hand in front of the camera in different positions and angles as shown above. By pressing keyboard keys a to z, defined as class numbers 0-25, the x and y coordinates of the landmarks of your hand at that frame are extracted and normalized to point 0 (the wrist point). The class number and the flattened coordinates are stored as a row in a CSV file. The count of the dataset in each class is displayed when you show your hand and press a letter. The data are sorted during execution and stored in CSV file format. I have collected 60 sets of data for each gesture in different positions and angles, totaling 540 datasets. The resulting file is called “***hand_gesture_data.csv***” and is structured as shown above.
 
 **Step 2: Model Training**
@@ -15,7 +15,7 @@ This site provides a straightforward way to train computers using Mediapipe hand
 *	Using the Keras Sequential API to define the layers of the neural network, including input, hidden, and output layers.
 *	Training the neural network on the preprocessed landmark data using TensorFlow’s training functionalities.
 *	Validating the model on the validation set to tune hyperparameters and prevent overfitting.
-
+<img src="/FCNN.png" alt="prototype" height="200">
 ***hand_train.ipynb:*** This notebook file starts the neural network training. The data from the CSV file is fed into a neural network model built with TensorFlow and Keras. Model layers are defined using the Sequential API. I am using a simple ReLU activation function. 
 I am using Jupyter Notebook in PyCharm on my laptop to run the training. The training is fast and can be completed within a minute. After training, the model is saved. Several models in different formats are saved, including *.h5 and *.tflite files. The *.tflite is the trained model, which can be used on Windows OS or Raspberry Pi. Additionally, I convert the model to a TFLite model with quantization for later testing. At the end of this step, the following files are created: ***hand_gesture_model.h5, hand_gesture_model.tflite, and hand_gesture_model_quantized.tflite***.
 
